@@ -2,34 +2,12 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# 漏洞播报
 
-Let's discover **Docusaurus in less than 5 minutes**.
+实时爬取和更新（5min每次）最新漏洞资讯，方便排查受影响的项目和组件。
 
-## Getting Started
+:::info 数据来源
 
-Get started by **creating a new site**.
+数据来源自 360CERT，Tenable，CNVD，CNNVD，奇安信，安全客，斗象，红后，绿盟，NVD
 
-Or **try Docusaurus immediately** with **[new.docusaurus.io](https://new.docusaurus.io)**.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**:
-
-```shell
-npx @docusaurus/init@latest init my-website classic
-```
-
-## Start your site
-
-Run the development server:
-
-```shell
-cd my-website
-
-npx docusaurus start
-```
-
-Your site starts at `http://localhost:3000`.
-
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and display your changes.
+:::

@@ -5,7 +5,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HomepageFeatures from '../components/HomepageFeatures';
-
+import Head from '@docusaurus/Head';
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -17,7 +17,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            浏览文档🚀
           </Link>
         </div>
       </div>
