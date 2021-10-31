@@ -20,6 +20,16 @@ const config = {
   [require.resolve("@easyops-cn/docusaurus-search-local"),
   {
     hashed:true,
+    translations:{
+      "search_placeholder": "搜索一下",
+      "see_all_results": "查看所有结果",
+      "no_results": "没有相关内容.",
+      "search_results_for": "搜索关键字 \"{{ keyword }}\"",
+      "search_the_documentation": "搜索一下安全文档",
+      "count_documents_found": "{{ count }} 个文档被找到",
+      "count_documents_found_plural": "{{ count }} 个文档被搜索到",
+      "no_documents_were_found": "没有找到相关文档"
+},
   },],
   ],
   presets: [
