@@ -16,6 +16,12 @@ const config = {
   organizationName: 'cnnho', // Usually your GitHub org/user name.
   projectName: 'board', // Usually your repo name.
   themes:['@docusaurus/theme-live-codeblock'],
+  plugins:[
+  [require.resolve("@easyops-cn/docusaurus-search-local"),
+  {
+    hashed:true,
+  },],
+  ],
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -43,11 +49,6 @@ const config = {
 
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({    
-      algolia: {
-      appId: '83X86GR48Z',
-      apiKey: '9fbffccb60fbb60b3ec379fd9decfc2d',
-      indexName: 'secure',
-      },
       navbar: {
         title: 'SecureWiki',
         logo: {
