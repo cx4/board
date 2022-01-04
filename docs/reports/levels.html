@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ChartCube</title>
+    <script src="https://gw.alipayobjects.com/os/lib/antv/g2plot/0.11.3/dist/g2plot.js"></script>
+  </head>
+  <body>
+  <div id="app"></div>
+  <script>
+    const container = document.getElementById('app');
+    const data = [
+      {
+        "风险等级": "高危",
+        "数量": 4
+      },
+      {
+        "风险等级": "中危",
+        "数量": 6
+      },
+      {
+        "风险等级": "低危",
+        "数量": 3
+      }
+    ];
+    const config = {
+      "title": {
+        "visible": true,
+        "text": "11月发现漏洞统计"
+      },
+      "description": {
+        "text": "一个简单的环图"
+      },
+      "legend": {
+        "flipPage": false
+      },
+      "label": {
+        "type": "spider"
+      },
+      "width": 560,
+      "height": 376,
+      "forceFit": false,
+      "colorField": "风险等级",
+      "angleField": "数量",
+      "id": "donut_chart",
+      "color": [
+        "#e8684a",
+        "#ff9d4d",
+        "#5b8ff9"
+      ]
+    }
+    const plot = new g2plot.Ring(container, {
+      data,
+      ...config,
+    });
+    plot.render();
+  </script>
+  </body>
+</html>

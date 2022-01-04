@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ChartCube</title>
+    <script src="https://gw.alipayobjects.com/os/lib/antv/g2plot/0.11.3/dist/g2plot.js"></script>
+  </head>
+  <body>
+  <div id="app"></div>
+  <script>
+    const container = document.getElementById('app');
+    const data = [
+      {
+        "故障类型": "黑屏（背光故障）",
+        "故障数量": 6
+      },
+      {
+        "故障类型": "系统卡死",
+        "故障数量": 5
+      },
+      {
+        "故障类型": "蓝牙链接失败",
+        "故障数量": 1
+      },
+      {
+        "故障类型": "显示异常",
+        "故障数量": 2
+      },
+      {
+        "故障类型": "卡屏（疑似固件损坏）",
+        "故障数量": 66
+      }
+    ];
+    const config = {
+      "title": {
+        "visible": true
+      },
+      "description": {
+        "text": "一个简单的饼图"
+      },
+      "legend": {
+        "flipPage": false
+      },
+      "label": {
+        "type": "spider"
+      },
+      "width": 740,
+      "forceFit": false,
+      "colorField": "故障类型",
+      "angleField": "故障数量",
+      "id": "pie_chart",
+      "color": [
+        "#5B8FF9",
+        "#5AD8A6",
+        "#5D7092",
+        "#F6BD16",
+        "#E8684A"
+      ]
+    }
+    const plot = new g2plot.Pie(container, {
+      data,
+      ...config,
+    });
+    plot.render();
+  </script>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ChartCube</title>
+    <script src="https://gw.alipayobjects.com/os/lib/antv/g2plot/0.11.3/dist/g2plot.js"></script>
+  </head>
+  <body>
+  <div id="app"></div>
+  <script>
+    const container = document.getElementById('app');
+    const data = [
+      {
+        "项目名称": "锦鲤卡",
+        "版次": 2
+      },
+      {
+        "项目名称": "星宏慧眼",
+        "版次": 2
+      },
+      {
+        "项目名称": "星象矩阵",
+        "版次": 2
+      },
+      {
+        "项目名称": "智易田",
+        "版次": 2
+      },
+      {
+        "项目名称": "星蚁家",
+        "版次": 2
+      },
+      {
+        "项目名称": "绩效",
+        "版次": 2
+      },
+      {
+        "项目名称": "直播管控",
+        "版次": 1
+      },
+      {
+        "项目名称": "监控平台",
+        "版次": 1
+      },
+      {
+        "项目名称": "鲤赞星球",
+        "版次": 1
+      },
+      {
+        "项目名称": "星优选",
+        "版次": 1
+      },
+      {
+        "项目名称": "鲤想记",
+        "版次": 1
+      },
+      {
+        "项目名称": "星印",
+        "版次": 1
+      },
+      {
+        "项目名称": "时间商城",
+        "版次": 1
+      },
+      {
+        "项目名称": "客户关系",
+        "版次": 1
+      },
+      {
+        "项目名称": "屏端App",
+        "版次": 1
+      }
+    ];
+    const config = {
+      "title": {
+        "visible": true,
+        "text": "12月项目累计发版测试统计"
+      },
+      "description": {
+        "text": "一个简单的柱状图"
+      },
+      "legend": {
+        "flipPage": false
+      },
+      "xAxis": {
+        "autoRotateLabel": true
+      },
+      "forceFit": false,
+      "width": 560,
+      "height": 376,
+      "yField": "版次",
+      "xField": "项目名称",
+      "id": "column_chart",
+      "color": [
+        "#5B8FF9"
+      ]
+    }
+    const plot = new g2plot.Column(container, {
+      data,
+      ...config,
+    });
+    plot.render();
+  </script>
+  </body>
+</html>

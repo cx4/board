@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://uicdn.toast.com/chart/latest/toastui-chart.min.css" />
+    <script src="https://uicdn.toast.com/chart/latest/toastui-chart.min.js"></script>
+  </head>
+  <body>
+  <div id="chart"></div>
+  <script>
+const el = document.getElementById('chart');
+      const data = {
+        categories: [
+          '11/29/2021',
+          '12/06/2021',
+          '12/13/2021',
+          '12/20/2021'
+        ],
+        series: [
+          {
+            name: '故障设备数量',
+            data: [5,5,48,22],
+          },
+        ],
+      };
+      const options = {
+        chart: { title: '12月份线上大屏设备故障数量统计', width: 800, height: 480 },
+        xAxis: {
+          title: '周',
+        },
+        yAxis: {
+          title: '数量',
+        },
+        tooltip: {
+          formatter: (value) => `${value}台`,
+        },
+        legend: {
+          align: 'bottom',
+        },
+      };
+
+      const chart = toastui.Chart.lineChart({ el, data, options });
+  </script>
+  </body>
+</html>

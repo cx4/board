@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: '安全测试部',
-  tagline: '数据驱动安全',
+  tagline: '协同联动，主动发现，快速响应',
   url: 'https://secure.yrzdm.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -16,31 +16,6 @@ const config = {
   organizationName: 'cnnho', // Usually your GitHub org/user name.
   projectName: 'board', // Usually your repo name.
   themes:['@docusaurus/theme-live-codeblock'],
-  plugins:[
-    [require.resolve("@easyops-cn/docusaurus-search-local"),
-    {
-      hashed:true,
-      translations:{
-        "search_placeholder": "搜索一下",
-        "see_all_results": "查看所有结果",
-        "no_results": "没有相关内容.",
-        "search_results_for": "搜索关键字 \"{{ keyword }}\"",
-        "search_the_documentation": "搜索一下安全文档",
-        "count_documents_found": "{{ count }} 个文档被找到",
-        "count_documents_found_plural": "{{ count }} 个文档被搜索到",
-        "no_documents_were_found": "没有找到相关文档"
-    },
-    },],
-    ['@docusaurus/plugin-content-docs',
-    {
-      id: 'reports',
-      path: 'reports',
-      routeBasePath: 'reports',
-      sidebarPath: require.resolve('./sidebarsReports.js'),
-    },
-    ],
-  ],
-  scripts:['https://www.jsdelivr.com/package/npm/chart.js'],
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -68,6 +43,11 @@ const config = {
 
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({    
+      algolia: {
+      appId: '83X86GR48Z',
+      apiKey: '9fbffccb60fbb60b3ec379fd9decfc2d',
+      indexName: 'secure',
+      },
       navbar: {
         title: 'SecureWiki',
         logo: {
@@ -83,7 +63,6 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {to: '/boardcast', label: '安全资讯看板', position: 'left'},
-          {to: '/reports/intro', label: '安全月报', position: 'left'},
         ],
       },
       footer: {
